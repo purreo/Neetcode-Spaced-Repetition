@@ -10,8 +10,10 @@ export function ProblemCard({ problem, onGrade }: Props) {
   return (
     <div className="bg-white rounded-lg shadow-sm border border-slate-200 p-4 mb-3 transition-all hover:shadow-md">
       <div className="flex justify-between items-center mb-3">
-        <h3 className="font-semibold text-slate-800 text-lg truncate flex-1">
-          {problem.slug}
+        <h3 className="font-semibold text-slate-800 text-lg truncate flex-1 hover:text-indigo-600 transition-colors">
+          <a href={`https://neetcode.io/problems/${problem.slug}`} target="_blank" rel="noreferrer" title="Open on Neetcode">
+            {problem.slug}
+          </a>
         </h3>
         <span className="text-xs font-medium bg-slate-100 text-slate-500 px-2 py-1 rounded">
           Lvl {problem.repetitions}

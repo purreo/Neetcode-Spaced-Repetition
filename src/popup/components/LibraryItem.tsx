@@ -13,8 +13,10 @@ export function LibraryItem({ problem, onDelete }: Props) {
   return (
     <div className="bg-white rounded-lg shadow-sm border border-slate-200 p-3 mb-2 flex flex-col gap-2 transition-all hover:shadow-md">
       <div className="flex justify-between items-center">
-        <h3 className="font-semibold text-slate-800 text-sm truncate flex-1">
-          {problem.slug}
+        <h3 className="font-semibold text-slate-800 text-sm truncate flex-1 hover:text-indigo-600 transition-colors">
+          <a href={`https://neetcode.io/problems/${problem.slug}`} target="_blank" rel="noreferrer" title="Open on Neetcode">
+            {problem.slug}
+          </a>
         </h3>
         <button 
           onClick={() => onDelete(problem.slug)}
