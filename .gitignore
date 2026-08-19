@@ -25,3 +25,7 @@ dist/
 dist-ssr/
 build/
 *.local
+
+# Env files
+.env
+.env.local
